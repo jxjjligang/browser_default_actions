@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #contents {
+            padding: 5px;
+            border: 1px green solid;
+        }
+    </style>
+</head>
+
+<body>
+
+    <fieldset id="contents">
+        <legend>#contents</legend>
+        <p>
+            How about to read <a href="http://wikipedia.org">Wikipedia</a> or visit <a href="http://w3.org"><i>W3.org</i></a>
+            and learn about modern standards?
+        </p>
+    </fieldset>
+
+    <script>
+        document.body.onclick = function (event) {
+            if ((event.target.tagName !== 'A') && (event.target.closest('A') === null))
+                return;
+
+            if (!confirm('Agree to leave the current page and navigate to another page?'))
+                event.preventDefault();
+        }
+    </script>
+</body>
+
+</html>

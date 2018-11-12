@@ -1,0 +1,23 @@
+<html>
+
+<head title="return false doesnot work">
+
+</head>
+
+<body>
+    <div id="root">
+        <a href="http://w3.org" onclick="handler()">the browser will go to w3.org</a>
+
+    </div>
+    <script>
+        function handler() {
+            alert("...");
+            // return false;            // does not work
+            event.preventDefault();     // this will work
+        }
+    </script>
+
+
+</body>
+
+</html>
